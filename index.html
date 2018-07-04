@@ -12,10 +12,22 @@
 </head>
     <body>
             <div id="app">
-                <h1>Name : {{ setName("Eiei") }}</h1>
+                Name : <input type="text" v-model="name"><br>
+                Food Favorite :
+                <input type="checkbox" value="ส้มตำ" v-model="foods">
+                <label>ส้มตำ</label>
+                <input type="checkbox" value="พิซซ่า" v-model="foods">
+                <label>พิซซ่า</label>
+                <input type="checkbox" value="ไข่" v-model="foods">
+                <label>ไข่</label>
+
+                <br>
+                <hr>
+                <h1>Name : {{ name }}</h1>
                 <p>Job : {{ job }}</p>
                 <p>Age : {{ age }}</p>
                 <p>Website : <a v-bind:href="website">miwtoo.github.io</a></p>
+                <p>Food Favorite : {{ foods }}</p>
                 
                 <button v-on:click="addAge()">Add</button>
                 <button v-on:click="SubreactAge()">Subtract</button>

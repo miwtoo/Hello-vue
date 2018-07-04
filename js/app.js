@@ -6,7 +6,7 @@ new Vue({
         job: "student",
         age: 20,
         website: "http://miwtoo.github.io/",
-        count: 0
+        foods: []
     },
 
     methods: {
@@ -18,6 +18,9 @@ new Vue({
         },
 
         addAge: function(){
+            this.age++
+        },
+        SubreactAge: function(){
             this.age++
         }
     }
